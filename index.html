@@ -1,0 +1,590 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Слайдер на чистом sass</title>
+	<!-- 
+	
+	
+		█────████──███──████──███──████──███──███────████──████──█──█──███────███──████──███──████──████──█──█──████──████───────█─█──████──███────████──█──█──███──█──█──███──████──████──███──███
+		█────█──█──█────█──█───█───█──█───█───█──────█──█──█─────██─█───█─────█────█──█──█────█──█──█──█──██─█────██──█──█───────█─█──█──█───█─────█──█──█──█──█────██─█───█───█──█──█──█───█───█
+		█────████──███──█──────█───████───█───███────█──█──█─██──█─██───█─────███──████──███──████──████──█─██───██───████───────█─█──█──█───█─────█─────████──███──█─██───█───████──████───█───███
+		█────█──█────█──█──█───█───█──█───█───█──────█──█──█──█──█──█───█───────█──█─────█────█─█───█──█──█──█──██────█──█──█────███──█──█───█─────█──█──█──█──█────█──█───█───█─█───█──█───█───█
+		███──█──█──███──████──███──█──█───█───███────████──████──█──█──███────███──█─────███──█─█───█──█──█──█──████──█──█──█─────█───████──███────████──█──█──███──█──█───█───█─█───█──█───█───███
+	 
+	
+	-->
+	
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/pure-css-slider/assets/css/style.min.css">
+	<link rel="stylesheet" type="text/css" href="/pure-css-slider/assets/css/prism.css" />
+	<script src="/pure-css-slider/assets/js/prism.js"></script>
+</head>
+<body>
+	<article>
+		<h1>Слайдер на чистом sass</h1>
+		
+		<link rel="stylesheet" type="text/css" href="/pure-css-slider/assets/css/slider_1.min.css">
+		<div class="slider_page" id="slider_page_1">
+	<input type="radio" name="slider_page_1" id="slider_page_slide1" checked>
+	<input type="radio" name="slider_page_1" id="slider_page_slide2">
+	<input type="radio" name="slider_page_1" id="slider_page_slide3">
+	<input type="radio" name="slider_page_1" id="slider_page_slide4">
+	<input type="radio" name="slider_page_1" id="slider_page_slide5">	
+	<input type="radio" name="slider_page_1" id="slider_page_slide6">
+	<input type="radio" name="slider_page_1" id="slider_page_slide7">
+	<input type="radio" name="slider_page_1" id="slider_page_slide8">
+	<input type="radio" name="slider_page_1" id="slider_page_slide9">
+	<input type="radio" name="slider_page_1" id="slider_page_slide10">
+	<div class="slider_page__panel">
+		<div class="slider_page__track">
+			<div class="slider_page__slide">1</div>
+			<div class="slider_page__slide">2</div>
+			<div class="slider_page__slide">3</div>
+			<div class="slider_page__slide">4</div>
+			<div class="slider_page__slide">5</div>
+			<div class="slider_page__slide">6</div>
+			<div class="slider_page__slide">7</div>
+			<div class="slider_page__slide">8</div>
+			<div class="slider_page__slide">9</div>
+			<div class="slider_page__slide">10</div>
+		</div>
+	</div>
+	<div class="slider_page__controls">
+		<label for="slider_page_slide1"></label>
+		<label for="slider_page_slide2"></label>
+		<label for="slider_page_slide3"></label>
+		<label for="slider_page_slide4"></label>
+		<label for="slider_page_slide5"></label>
+		<label for="slider_page_slide6"></label>
+		<label for="slider_page_slide7"></label>
+		<label for="slider_page_slide8"></label>
+		<label for="slider_page_slide9"></label>
+		<label for="slider_page_slide10"></label>
+	</div>
+</div>		<h3>html</h3>
+		<div class="code">
+			<pre><code class="language-markup">&lt;div class=&quot;slider_page&quot; id=&quot;slider_page_1&quot;&gt;
+	&lt;input type=&quot;radio&quot; name=&quot;slider_page_1&quot; id=&quot;slider_page_slide1&quot; checked&gt;
+	&lt;input type=&quot;radio&quot; name=&quot;slider_page_1&quot; id=&quot;slider_page_slide2&quot;&gt;
+	&lt;input type=&quot;radio&quot; name=&quot;slider_page_1&quot; id=&quot;slider_page_slide3&quot;&gt;
+	&lt;input type=&quot;radio&quot; name=&quot;slider_page_1&quot; id=&quot;slider_page_slide4&quot;&gt;
+	&lt;input type=&quot;radio&quot; name=&quot;slider_page_1&quot; id=&quot;slider_page_slide5&quot;&gt;	
+	&lt;input type=&quot;radio&quot; name=&quot;slider_page_1&quot; id=&quot;slider_page_slide6&quot;&gt;
+	&lt;input type=&quot;radio&quot; name=&quot;slider_page_1&quot; id=&quot;slider_page_slide7&quot;&gt;
+	&lt;input type=&quot;radio&quot; name=&quot;slider_page_1&quot; id=&quot;slider_page_slide8&quot;&gt;
+	&lt;input type=&quot;radio&quot; name=&quot;slider_page_1&quot; id=&quot;slider_page_slide9&quot;&gt;
+	&lt;input type=&quot;radio&quot; name=&quot;slider_page_1&quot; id=&quot;slider_page_slide10&quot;&gt;
+	&lt;div class=&quot;slider_page__panel&quot;&gt;
+		&lt;div class=&quot;slider_page__track&quot;&gt;
+			&lt;div class=&quot;slider_page__slide&quot;&gt;1&lt;/div&gt;
+			&lt;div class=&quot;slider_page__slide&quot;&gt;2&lt;/div&gt;
+			&lt;div class=&quot;slider_page__slide&quot;&gt;3&lt;/div&gt;
+			&lt;div class=&quot;slider_page__slide&quot;&gt;4&lt;/div&gt;
+			&lt;div class=&quot;slider_page__slide&quot;&gt;5&lt;/div&gt;
+			&lt;div class=&quot;slider_page__slide&quot;&gt;6&lt;/div&gt;
+			&lt;div class=&quot;slider_page__slide&quot;&gt;7&lt;/div&gt;
+			&lt;div class=&quot;slider_page__slide&quot;&gt;8&lt;/div&gt;
+			&lt;div class=&quot;slider_page__slide&quot;&gt;9&lt;/div&gt;
+			&lt;div class=&quot;slider_page__slide&quot;&gt;10&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;slider_page__controls&quot;&gt;
+		&lt;label for=&quot;slider_page_slide1&quot;&gt;&lt;/label&gt;
+		&lt;label for=&quot;slider_page_slide2&quot;&gt;&lt;/label&gt;
+		&lt;label for=&quot;slider_page_slide3&quot;&gt;&lt;/label&gt;
+		&lt;label for=&quot;slider_page_slide4&quot;&gt;&lt;/label&gt;
+		&lt;label for=&quot;slider_page_slide5&quot;&gt;&lt;/label&gt;
+		&lt;label for=&quot;slider_page_slide6&quot;&gt;&lt;/label&gt;
+		&lt;label for=&quot;slider_page_slide7&quot;&gt;&lt;/label&gt;
+		&lt;label for=&quot;slider_page_slide8&quot;&gt;&lt;/label&gt;
+		&lt;label for=&quot;slider_page_slide9&quot;&gt;&lt;/label&gt;
+		&lt;label for=&quot;slider_page_slide10&quot;&gt;&lt;/label&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+		</div>
+		<h3>scss</h3>		
+		<div class="code">
+			<pre><code class="language-scss">@include slider_page(
+	$slider_page_width 				: 900px, 	
+	$slider_page_content			: 1110px, 
+	$slider_page_margin				: 30px,		
+	$slider_page_max_width			: 1920px,	
+	$slider_page_max_count_slide	: 20,		
+	$slider_page_animate 			: false,		
+
+	$slider_page_time_slide_show 		: 2,	
+	$slider_page_time_slide_transition	: 0.5,
+	$slider_page_min_count_slide		: 1	
+);</code></pre>
+		</div>
+		<ul><li><a href="/pure-css-slider/example_1.html">Слайдер #1</a><li><a href="/pure-css-slider/example_2.html">Слайдер #2</a><li><a href="/pure-css-slider/example_3.html">Слайдер #3</a><li><a href="/pure-css-slider/example_4.html">Слайдер #4</a><li><a href="/pure-css-slider/example_5.html">Слайдер #5</a><li><a href="/pure-css-slider/example_6.html">Слайдер #6</a></ul>
+
+
+
+
+		<h3>scss</h3>
+
+		<div class="link_download_style">
+			<a href="/pure-css-slider/assets/css/_slider.scss" download>Скачать</a>
+		</div>
+
+		<div class="code">
+			<pre><code class="language-scss">// Исходник
+@mixin slider_page(
+
+	$slider_page_width 				: 900px, 	// ширина слайда 
+	$slider_page_content			: 1110px, 	// ширина контента сайта 
+	$slider_page_margin				: 30px,		// отступ между слайдами 
+	$slider_page_max_width			: 1920px,	// максимальная ширина слайда
+	$slider_page_max_count_slide	: 20,		// максимальное количество слайдов
+	$slider_page_animate 			: true,		// использоване анимации 
+	
+	$slider_page_time_slide_show 		: 2,	// время показа слайда
+	$slider_page_time_slide_transition	: 0.5, 	// продолжительность смены кадра 
+	$slider_page_min_count_slide		: 1 	// минимальное кол-во анимированных слайдов 
+) {
+
+	$class_slider 					: '.slider_page'; // класс
+	// положение слайдов
+	@mixin slider_page_mixin_position__slide($width, $i)  {
+		&:nth-child(#{$i}) {
+			left: calc(#{$width} * #{$i - 1} + #{$slider_page_margin * $i}); 
+		}
+	}
+
+	@mixin slider_page_mixin_position__slide-fluid($i) {
+		$width: 100%;
+		&:nth-child(#{$i}) {
+			left: calc(#{$width * ($i - 1)} + #{$slider_page_margin * $i}); 
+		}
+	}
+	// Положение трека 
+	@mixin slider_page_mixin_position__track($width, $i, $slider_page_content)  {
+		@if $i == 1 {
+			left: calc(((100% - #{$slider_page_content}) / 2) + ((#{$width} + #{$slider_page_margin}) * -1) * #{$i - 1} - #{$slider_page_margin}); 
+		} @else if $i == $slider_page_max_count_slide {
+			left: calc(((100% - #{$slider_page_content - ($slider_page_content - $width) - ($slider_page_content - $width) / 2})) + #{(($width + $slider_page_margin) * -1) * ($i - 1)  - $slider_page_margin}   - ((100% - #{$width}) / 2)); 
+		} @else {
+			// left: calc(((100% - #{$width}) / 2) + #{(($width + $slider_page_margin + $slider_page_margin / 2) * -1) * ($i - 1)  - $slider_page_margin / 2} ); 
+			// a:a;
+
+
+			left: calc(((100% - #{$slider_page_content}) / 2) + ((#{$width} + #{$slider_page_margin}) * -1 * #{$i - 1} - #{$slider_page_margin}) + #{($slider_page_content - $width) / 2};			
+		}
+	}
+	@mixin slider_page_mixin_position__track-fluid($i) {
+		$width: 100%;
+		@if $i == 1 {
+			left: calc(((100% - #{$width}) / 2) + ((#{$width} + #{$slider_page_margin}) * -1) * #{$i - 1} - #{$slider_page_margin}); 
+		} @else if $i == $slider_page_max_count_slide {
+			left: calc(((((#{$width} + #{$slider_page_margin}) * -1) * #{$i - 1}  - #{$slider_page_margin}))); 
+		} @else {
+			left: calc((#{$width * -1 * ($i - 1)}  -  #{$slider_page_margin  * ($i - 1) + $slider_page_margin});
+		}
+	}
+	@mixin slider_page_mixin($width, $slider_page_content) {
+		#{$class_slider}__slide {
+			width: $width;
+			@for $i from 1 through $slider_page_max_count_slide {
+				@include slider_page_mixin_position__slide($width, $i);
+			}
+		}
+		@for $i from 1 through $slider_page_max_count_slide {
+			#slider_page_slide#{$i}:checked ~ #{$class_slider}__panel #{$class_slider}__track  {
+				@include slider_page_mixin_position__track($width, $i, $slider_page_content);
+			}
+		}
+	}
+	@mixin slider_page_mixin-fluid() {
+		#{$class_slider}__slide {
+			width: 100%;
+			@for $i from 1 through $slider_page_max_count_slide {
+				@include slider_page_mixin_position__slide-fluid($i);
+			}
+
+		}
+		@for $i from 1 through $slider_page_max_count_slide {
+			#slider_page_slide#{$i}:checked ~ #{$class_slider}__panel #{$class_slider}__track {
+				@include slider_page_mixin_position__track-fluid($i);
+			}
+		}
+	}
+	@mixin slider_page_animation_slide_count($width, $slider_page_content, $transition, $time_slide, $all_time, $count) {
+		0% {
+			left: calc(((100% - #{$slider_page_content}) / 2) + ((#{$width} + #{$slider_page_margin}) * -1) * #{1 - 1} - #{$slider_page_margin}); 
+		}
+		@for $i from 2 through $count {
+
+			$sec : ($time_slide  - $transition) + $time_slide * ($i - 2) ;
+			$percentages : 100  * $sec / $all_time;
+			#{$percentages}% { 
+
+
+				@if ($i - 1 == 1) {
+					left: calc(((100% - #{$slider_page_content}) / 2) + ((#{$width} + #{$slider_page_margin}) * -1 * #{$i - 2} - #{$slider_page_margin}));	
+				} @else {
+					left: calc(((100% - #{$slider_page_content}) / 2) + ((#{$width} + #{$slider_page_margin}) * -1 * #{$i - 2} - #{$slider_page_margin}) + #{($slider_page_content - $width) / 2};			
+					
+				}
+			}
+
+
+
+
+			$sec : ($time_slide) + $time_slide * ($i - 2) ;
+			$percentages : 100  * $sec / $all_time;
+			#{$percentages}% {
+				@if ($i == $count) {
+					left: calc(((100% - #{$slider_page_content - ($slider_page_content - $width) - ($slider_page_content - $width) / 2})) + #{(($width + $slider_page_margin) * -1) * ($i - 1)  - $slider_page_margin}   - ((100% - #{$width}) / 2)); 
+				} @else {
+					left: calc(((100% - #{$slider_page_content}) / 2) + ((#{$width} + #{$slider_page_margin}) * -1 * #{$i - 1} - #{$slider_page_margin}) + #{($slider_page_content - $width) / 2}); 
+
+				}
+			}
+		}
+
+
+		$sec : ($time_slide) + $time_slide * ($count  - 1) ;
+		$percentages : 100  * $sec / $all_time;
+		#{$percentages}% {
+			left: calc(((100% - #{$slider_page_content - ($slider_page_content - $width) - ($slider_page_content - $width) / 2})) + #{(($width + $slider_page_margin) * -1) * ($count - 1)  - $slider_page_margin}   - ((100% - #{$width}) / 2)); 
+		}
+		100% {
+			left: calc(((100% - #{$slider_page_content}) / 2) + ((#{$width} + #{$slider_page_margin}) * -1) * #{1 - 1} - #{$slider_page_margin}); 
+		}
+	}
+	@mixin slider_page-fluid_animation_slide_count($transition, $time_slide, $all_time, $count) {
+
+		$width: 100%;
+		0% {
+			left: calc((#{$width * -1 * (1 - 1)}  -  #{$slider_page_margin  * (1 - 1) + $slider_page_margin});
+		}
+		@for $i from 2 through $count {
+			$sec : ($time_slide  - $transition) + $time_slide * ($i - 2) ;
+			$percentages : 100  * $sec / $all_time;
+			#{$percentages}% { 
+				left: calc((#{$width * -1 * ($i - 2)}  -  #{$slider_page_margin  * ($i - 2) + $slider_page_margin});
+			}
+
+
+			$sec : ($time_slide) + $time_slide * ($i - 2) ;
+			$percentages : 100  * $sec / $all_time;
+			#{$percentages}% {
+				left: calc((#{$width * -1 * ($i - 1)}  -  #{$slider_page_margin  * ($i - 1) + $slider_page_margin});
+			}
+		}
+
+
+		$sec : ($time_slide) + $time_slide * ($count  - 1) ;
+		$percentages : 100  * $sec / $all_time;
+		#{$percentages}% {
+			left: calc(((((#{$width} + #{$slider_page_margin}) * -1) * #{$count - 1}  - #{$slider_page_margin}))); 
+		}
+		100% {
+			left: calc((#{$width * -1 * (1 - 1)}  -  #{$slider_page_margin  * (1 - 1) + $slider_page_margin}); 
+		}
+	}
+	@mixin slider_page_animation_slide_active($slider_page_all_time, $slider_page_slide_count, $prefix : '') {
+		@for $k from 1 through $slider_page_slide_count {
+			&#{$class_slider}--animation[slide_count="#{$slider_page_slide_count}"] #{$class_slider}__panel #{$class_slider}__track  #{$class_slider}__slide:nth-child(#{$k}):after {
+				animation: slider_page#{$prefix}_animation_slide_count_#{$slider_page_slide_count}-active-#{$k}  #{$slider_page_all_time}s ease infinite;
+			}
+			&#{$class_slider}--animation[slide_count="#{$slider_page_slide_count}"] #{$class_slider}__controls label:nth-of-type(#{$k}) {
+				animation: slider_page#{$prefix}_animation_slide_count_#{$slider_page_slide_count}-active-controls-#{$k}  #{$slider_page_all_time}s ease infinite;
+			}
+		}
+	}
+	#{$class_slider}, #{$class_slider}-fluid {
+	    box-sizing: border-box;
+	    &:after, &:before {
+    	    box-sizing: border-box;
+	    }
+
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+		& > input {
+			display: none;
+		}
+		&__panel {
+			width: 100%;
+			position: relative;
+			height: 550px;
+			overflow: hidden;
+		}
+		&__track {
+			position: relative;
+			height: 100%;
+			transition : all ease #{$slider_page_time_slide_transition}s;
+		}
+		&__slide {
+			display: block;
+			position: absolute;
+			width: $slider_page_width;
+			margin: 0px auto;
+			height: 100%;
+			background-color: #ffffff;
+			top: 0px;
+			&:after {
+				width: 100%;
+				height: 100%;
+				content: '';
+				position: absolute;
+				background-color: rgba(0, 0, 0, 0.5);
+				top: 0px;
+				left: 0px;
+				transition : all ease #{$slider_page_time_slide_transition}s;
+			}
+		}
+		&__controls {
+			display: flex;
+			justify-content: center;
+			padding: 0px;
+			list-style: none;
+			margin: 25px auto;
+			width: 100%;
+			flex-wrap: wrap;
+			& > label {
+				width: 14px;
+				height: 14px;
+				background: rgba(#030303, 0.7);
+				border-radius: 50%;
+				margin: 3px 14px;
+				border: 1px solid #030303;
+				cursor: pointer;
+				min-width: 14px;
+				min-height: 14px;
+				flex: 0 0 14px;
+				transition : all ease #{$slider_page_time_slide_transition}s;
+				position: relative;
+				&.active, &:hover {
+					background: rgba(#030303, 1);
+				}
+			}
+		}
+	}
+	#{$class_slider} {
+		@for $i from 1 through $slider_page_max_count_slide {
+			#slider_page_slide#{$i}:checked ~ &__controls label:nth-of-type(#{$i}) {
+				background: rgba(#030303, 1);
+			}
+			#slider_page_slide#{$i}:checked ~ &__panel &__track &__slide:nth-of-type(#{$i}) {
+				&:after {
+					background-color: rgba(0, 0, 0, 0);
+				}
+			}
+		}
+		@include slider_page_mixin($slider_page_width, $slider_page_content);
+		
+		@media screen and (max-width: $slider_page_width) {
+			@include slider_page_mixin-fluid();
+		}
+
+		&-fluid {
+			@include slider_page_mixin-fluid();
+		}
+		@media screen and (min-width: $slider_page_max_width) {
+			&-fluid {
+				@include slider_page_mixin($slider_page_max_width, $slider_page_max_width);
+			}
+		}
+	}
+	@if $slider_page_animate {
+
+
+		@if $slider_page_min_count_slide == 1 {
+			$slider_page_min_count_slide : $slider_page_min_count_slide + 1;
+		}
+
+		@if $slider_page_min_count_slide < 1 {
+			$slider_page_min_count_slide : 2;
+		}
+
+		@for $slider_page_slide_count from $slider_page_min_count_slide  through $slider_page_max_count_slide {
+			$slider_page_time_slide : $slider_page_time_slide_show + $slider_page_time_slide_transition;
+			$slider_page_all_time 	: $slider_page_time_slide * $slider_page_slide_count + 1;
+
+			#{$class_slider}, #{$class_slider}-fluid {
+				@include slider_page_animation_slide_active($slider_page_all_time, $slider_page_slide_count);
+			}
+			#{$class_slider} {
+				@for $k from 1 through $slider_page_slide_count {
+					&#{&}--animation[slide_count="#{$slider_page_slide_count}"] #{$class_slider}__panel #{$class_slider}__track {
+						animation: slider_page_animation_slide_count_#{$slider_page_slide_count}  #{$slider_page_all_time}s ease infinite;
+					}
+				}
+				@keyframes slider_page_animation_slide_count_#{$slider_page_slide_count} {
+					@include slider_page_animation_slide_count($slider_page_width, $slider_page_content, $slider_page_time_slide_transition, $slider_page_time_slide, $slider_page_all_time, $slider_page_slide_count);
+				}
+			}
+			#{$class_slider}-fluid {
+				@for $k from 1 through $slider_page_slide_count {
+					&#{$class_slider}--animation[slide_count="#{$slider_page_slide_count}"] #{$class_slider}__panel #{$class_slider}__track {
+						animation: slider_page-fluid_animation_slide_count_#{$slider_page_slide_count}  #{$slider_page_all_time}s ease infinite;
+					}
+				}
+				@keyframes slider_page-fluid_animation_slide_count_#{$slider_page_slide_count} {
+					@include slider_page-fluid_animation_slide_count($slider_page_time_slide_transition, $slider_page_time_slide, $slider_page_all_time, $slider_page_slide_count);
+				}
+			}
+
+			@each $prefix in '-fluid-max', '-fluid', '' {
+				@for $k from 2 through $slider_page_slide_count {
+					@keyframes slider_page#{$prefix}_animation_slide_count_#{$slider_page_slide_count}-active-#{$k}{
+						0% {
+							background-color: rgba(0, 0, 0, 0.5);
+							z-index: 2;
+						}
+						$sec : ($slider_page_time_slide - $slider_page_time_slide_transition) + $slider_page_time_slide * ($k - 2) ;
+						$percentages : 100  * $sec / $slider_page_all_time;
+						#{$percentages}% { 
+							background-color: rgba(0, 0, 0, 0.5);
+							z-index: 2;
+						}
+						$sec : ($slider_page_time_slide) + $slider_page_time_slide * ($k - 2) ;
+						$percentages : 100  * $sec / $slider_page_all_time;
+						#{$percentages}% { 
+							background-color: transparent;
+							z-index: -1;
+						}
+						$sec : ($slider_page_time_slide - $slider_page_time_slide_transition) + $slider_page_time_slide * ($k - 1) ;
+						$percentages : 100  * $sec / $slider_page_all_time;
+						#{$percentages}% { 
+							background-color: transparent;
+							z-index: -1;
+						}
+						$sec : ($slider_page_time_slide) + $slider_page_time_slide * ($k - 1) ;
+						$percentages : 100  * $sec / $slider_page_all_time;
+						#{$percentages}% { 
+							background-color: rgba(0, 0, 0, 0.5);
+							z-index: 2;
+						}
+						100% {
+							background-color: rgba(0, 0, 0, 0.5);
+							z-index: 2;
+						}
+					}
+					@keyframes slider_page#{$prefix}_animation_slide_count_#{$slider_page_slide_count}-active-controls-#{$k} {
+						0% {
+							background: rgba(#030303, 0.7);
+						}
+						$sec : ($slider_page_time_slide - $slider_page_time_slide_transition) + $slider_page_time_slide * ($k - 2) ;
+						$percentages : 100  * $sec / $slider_page_all_time;
+						#{$percentages}% { 
+							background: rgba(#030303, 0.7);
+						}
+						$sec : ($slider_page_time_slide) + $slider_page_time_slide * ($k - 2) ;
+						$percentages : 100  * $sec / $slider_page_all_time;
+						#{$percentages}% { 
+							background: rgba(#030303, 1);
+						}
+						$sec : ($slider_page_time_slide - $slider_page_time_slide_transition) + $slider_page_time_slide * ($k - 1) ;
+						$percentages : 100  * $sec / $slider_page_all_time;
+						#{$percentages}% { 
+							background: rgba(#030303, 1);
+						}
+						$sec : ($slider_page_time_slide) + $slider_page_time_slide * ($k - 1) ;
+						$percentages : 100  * $sec / $slider_page_all_time;
+						#{$percentages}% { 
+							background: rgba(#030303, 0.7);
+						}
+						100% {
+							background: rgba(#030303, 0.7);
+						}
+					}
+				}
+				@keyframes slider_page#{$prefix}_animation_slide_count_#{$slider_page_slide_count}-active-1 {
+					0% { 
+						background-color: transparent;
+						z-index: -1;
+					}
+					$sec : ($slider_page_time_slide - $slider_page_time_slide_transition) + $slider_page_time_slide * (1 - 1) ;
+					$percentages : 100  * $sec / $slider_page_all_time;
+					#{$percentages}% { 
+						background-color: transparent;
+						z-index: -1;
+					}
+
+					$sec : ($slider_page_time_slide) + $slider_page_time_slide_transition * (1 - 1) ;
+					$percentages : 100  * $sec / $slider_page_all_time;
+					#{$percentages}% { 
+						background-color: rgba(0, 0, 0, 0.5);
+						z-index: 2;
+					}
+
+
+					
+					$sec : ($slider_page_time_slide) + $slider_page_time_slide * ($slider_page_slide_count - 1) ;
+					$percentages : 100  * $sec / $slider_page_all_time;
+
+					#{$percentages}% { 
+						background: $slider_page_slide_count;
+						background-color: rgba(0, 0, 0, 0.5);
+						z-index: 2;
+					}
+					100% { 
+						background-color: transparent;
+						z-index: -1;
+					}
+				}
+				@keyframes slider_page#{$prefix}_animation_slide_count_#{$slider_page_slide_count}-active-controls-1 {
+					0% { 
+						background: rgba(#030303, 1);
+					}
+					$sec : ($slider_page_time_slide - $slider_page_time_slide_transition) + $slider_page_time_slide * (1 - 1) ;
+					$percentages : 100  * $sec / $slider_page_all_time;
+					#{$percentages}% { 
+						background: rgba(#030303, 1);
+					}
+
+					$sec : ($slider_page_time_slide) + $slider_page_time_slide_transition * (1 - 1) ;
+					$percentages : 100  * $sec / $slider_page_all_time;
+					#{$percentages}% { 
+						background: rgba(#030303, 0.7);
+					}
+
+					$sec : ($slider_page_time_slide) + $slider_page_time_slide * ($slider_page_slide_count - 1) ;
+					$percentages : 100  * $sec / $slider_page_all_time;
+					#{$percentages}% { 
+						background: rgba(#030303, 0.7);
+					}
+					100% { 
+						background: rgba(#030303, 1);
+					}
+				}
+			}
+			@keyframes slider_page-fluid-max_animation_slide_count_#{$slider_page_slide_count} {
+				@include slider_page_animation_slide_count($slider_page_max_width,$slider_page_max_width,  $slider_page_time_slide_transition, $slider_page_time_slide, $slider_page_all_time, $slider_page_slide_count);
+			}
+
+			@media screen and (min-width: $slider_page_max_width) {
+				#{$class_slider}-fluid {
+					@include slider_page_animation_slide_active($slider_page_all_time, $slider_page_slide_count, '-fluid-max');
+					&#{$class_slider}--animation[slide_count="#{$slider_page_slide_count}"] #{$class_slider}__panel #{$class_slider}__track {
+						animation: slider_page-fluid-max_animation_slide_count_#{$slider_page_slide_count}  #{$slider_page_all_time}s ease infinite;
+					}
+				}
+			}
+			@media screen and (max-width: $slider_page_width) {
+				#{$class_slider} {
+					@include slider_page_animation_slide_active($slider_page_all_time, $slider_page_slide_count, '-fluid');
+					&#{$class_slider}--animation[slide_count="#{$slider_page_slide_count}"] #{$class_slider}__panel #{$class_slider}__track {
+						animation: slider_page-fluid_animation_slide_count_#{$slider_page_slide_count}  #{$slider_page_all_time}s ease infinite;
+					}
+				}
+			}
+		}
+	}
+}</code></pre>
+		</div>
+	</article>
+<footer><a href="https://taknepoidet.ru/">TakNePoidet</a> (c) 2017<br> <small>By Якин Никита</small></footer>
+</body>
+</html>

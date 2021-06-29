@@ -1,0 +1,141 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Слайдер #4</title>
+	<!-- 
+	
+	
+		█────████──███──████──███──████──███──███────████──████──█──█──███────███──████──███──████──████──█──█──████──████───────█─█──████──███────████──█──█──███──█──█──███──████──████──███──███
+		█────█──█──█────█──█───█───█──█───█───█──────█──█──█─────██─█───█─────█────█──█──█────█──█──█──█──██─█────██──█──█───────█─█──█──█───█─────█──█──█──█──█────██─█───█───█──█──█──█───█───█
+		█────████──███──█──────█───████───█───███────█──█──█─██──█─██───█─────███──████──███──████──████──█─██───██───████───────█─█──█──█───█─────█─────████──███──█─██───█───████──████───█───███
+		█────█──█────█──█──█───█───█──█───█───█──────█──█──█──█──█──█───█───────█──█─────█────█─█───█──█──█──█──██────█──█──█────███──█──█───█─────█──█──█──█──█────█──█───█───█─█───█──█───█───█
+		███──█──█──███──████──███──█──█───█───███────████──████──█──█──███────███──█─────███──█─█───█──█──█──█──████──█──█──█─────█───████──███────████──█──█──███──█──█───█───█─█───█──█───█───███
+	 
+	
+	-->
+	
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/pure-css-slider/assets/css/style.min.css">
+	<link rel="stylesheet" type="text/css" href="/pure-css-slider/assets/css/prism.css" />
+	<script src="/pure-css-slider/assets/js/prism.js"></script>
+</head>
+<body>
+	<article>
+		<h1><a href="/pure-css-slider/">Слайдер на чистом sass</a></h1>
+		<ul><li><a href="/pure-css-slider/example_1.html">Слайдер #1</a><li><a href="/pure-css-slider/example_2.html">Слайдер #2</a><li><a href="/pure-css-slider/example_3.html">Слайдер #3</a><li class="active"><a href="/pure-css-slider/example_4.html">Слайдер #4</a><li><a href="/pure-css-slider/example_5.html">Слайдер #5</a><li><a href="/pure-css-slider/example_6.html">Слайдер #6</a></ul>		<link rel="stylesheet" type="text/css" href="/pure-css-slider/assets/css/slider_4.min.css">
+		<h2>Слайдер #4</h2>
+		
+		<div class="slider_page-fluid" id="slider_page_1">
+	<input type="radio" name="slider_page_1" id="slider_page_slide1" checked>
+	<input type="radio" name="slider_page_1" id="slider_page_slide2">
+	<input type="radio" name="slider_page_1" id="slider_page_slide3">
+	<input type="radio" name="slider_page_1" id="slider_page_slide4">
+	<input type="radio" name="slider_page_1" id="slider_page_slide5">	
+	<input type="radio" name="slider_page_1" id="slider_page_slide6">
+	<input type="radio" name="slider_page_1" id="slider_page_slide7">
+	<input type="radio" name="slider_page_1" id="slider_page_slide8">
+	<input type="radio" name="slider_page_1" id="slider_page_slide9">
+	<input type="radio" name="slider_page_1" id="slider_page_slide10">
+	<div class="slider_page__panel">
+		<div class="slider_page__track">
+			<div class="slider_page__slide">1</div>
+			<div class="slider_page__slide">2</div>
+			<div class="slider_page__slide">3</div>
+			<div class="slider_page__slide">4</div>
+			<div class="slider_page__slide">5</div>
+			<div class="slider_page__slide">6</div>
+			<div class="slider_page__slide">7</div>
+			<div class="slider_page__slide">8</div>
+			<div class="slider_page__slide">9</div>
+			<div class="slider_page__slide">10</div>
+		</div>
+	</div>
+	<div class="slider_page__controls">
+		<label for="slider_page_slide1"></label>
+		<label for="slider_page_slide2"></label>
+		<label for="slider_page_slide3"></label>
+		<label for="slider_page_slide4"></label>
+		<label for="slider_page_slide5"></label>
+		<label for="slider_page_slide6"></label>
+		<label for="slider_page_slide7"></label>
+		<label for="slider_page_slide8"></label>
+		<label for="slider_page_slide9"></label>
+		<label for="slider_page_slide10"></label>
+	</div>
+</div>		<h3>html</h3>
+		<div class="code">
+			<pre><code class="language-markup">&lt;div class=&quot;slider_page-fluid&quot; id=&quot;slider_page_1&quot;&gt;
+	&lt;input type=&quot;radio&quot; name=&quot;slider_page_1&quot; id=&quot;slider_page_slide1&quot; checked&gt;
+	&lt;input type=&quot;radio&quot; name=&quot;slider_page_1&quot; id=&quot;slider_page_slide2&quot;&gt;
+	&lt;input type=&quot;radio&quot; name=&quot;slider_page_1&quot; id=&quot;slider_page_slide3&quot;&gt;
+	&lt;input type=&quot;radio&quot; name=&quot;slider_page_1&quot; id=&quot;slider_page_slide4&quot;&gt;
+	&lt;input type=&quot;radio&quot; name=&quot;slider_page_1&quot; id=&quot;slider_page_slide5&quot;&gt;	
+	&lt;input type=&quot;radio&quot; name=&quot;slider_page_1&quot; id=&quot;slider_page_slide6&quot;&gt;
+	&lt;input type=&quot;radio&quot; name=&quot;slider_page_1&quot; id=&quot;slider_page_slide7&quot;&gt;
+	&lt;input type=&quot;radio&quot; name=&quot;slider_page_1&quot; id=&quot;slider_page_slide8&quot;&gt;
+	&lt;input type=&quot;radio&quot; name=&quot;slider_page_1&quot; id=&quot;slider_page_slide9&quot;&gt;
+	&lt;input type=&quot;radio&quot; name=&quot;slider_page_1&quot; id=&quot;slider_page_slide10&quot;&gt;
+	&lt;div class=&quot;slider_page__panel&quot;&gt;
+		&lt;div class=&quot;slider_page__track&quot;&gt;
+			&lt;div class=&quot;slider_page__slide&quot;&gt;1&lt;/div&gt;
+			&lt;div class=&quot;slider_page__slide&quot;&gt;2&lt;/div&gt;
+			&lt;div class=&quot;slider_page__slide&quot;&gt;3&lt;/div&gt;
+			&lt;div class=&quot;slider_page__slide&quot;&gt;4&lt;/div&gt;
+			&lt;div class=&quot;slider_page__slide&quot;&gt;5&lt;/div&gt;
+			&lt;div class=&quot;slider_page__slide&quot;&gt;6&lt;/div&gt;
+			&lt;div class=&quot;slider_page__slide&quot;&gt;7&lt;/div&gt;
+			&lt;div class=&quot;slider_page__slide&quot;&gt;8&lt;/div&gt;
+			&lt;div class=&quot;slider_page__slide&quot;&gt;9&lt;/div&gt;
+			&lt;div class=&quot;slider_page__slide&quot;&gt;10&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;slider_page__controls&quot;&gt;
+		&lt;label for=&quot;slider_page_slide1&quot;&gt;&lt;/label&gt;
+		&lt;label for=&quot;slider_page_slide2&quot;&gt;&lt;/label&gt;
+		&lt;label for=&quot;slider_page_slide3&quot;&gt;&lt;/label&gt;
+		&lt;label for=&quot;slider_page_slide4&quot;&gt;&lt;/label&gt;
+		&lt;label for=&quot;slider_page_slide5&quot;&gt;&lt;/label&gt;
+		&lt;label for=&quot;slider_page_slide6&quot;&gt;&lt;/label&gt;
+		&lt;label for=&quot;slider_page_slide7&quot;&gt;&lt;/label&gt;
+		&lt;label for=&quot;slider_page_slide8&quot;&gt;&lt;/label&gt;
+		&lt;label for=&quot;slider_page_slide9&quot;&gt;&lt;/label&gt;
+		&lt;label for=&quot;slider_page_slide10&quot;&gt;&lt;/label&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+		</div>
+		<h3>scss</h3>		
+		<div class="code">
+			<pre><code class="language-scss">@include slider_page(
+	$slider_page_width 				: 1110px,	
+	$slider_page_content			: 1110px, 
+	$slider_page_margin				: 0px,		
+	$slider_page_max_width			: 1920px,	
+	$slider_page_max_count_slide	: 20,		
+	$slider_page_animate 			: false,		
+
+	$slider_page_time_slide_show 		: 5,	
+	$slider_page_time_slide_transition	: 0.5,
+	$slider_page_min_count_slide		: 1	
+);</code></pre>
+		</div>
+
+
+		<div class="link_download_style">
+			<a href="/pure-css-slider/assets/css/slider_4.css" download>Скачать стили</a>
+			<a href="/pure-css-slider/assets/css/slider_4.min.css" download>Скачать сжатые стили</a>
+		</div>
+		
+	</article>
+	<footer><a href="https://taknepoidet.ru/">TakNePoidet</a> (c) 2017<br> <small>By Якин Никита</small></footer>
+</body>
+</html>
